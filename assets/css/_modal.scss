@@ -1,0 +1,14 @@
+.modal-content {
+  background-color: transparent;
+}
+
+.modal-content img {
+  width: 100%;
+  object-fit: contain;
+  image-rendering: crisp-edges;
+}
+
+// class modal
+.modal-open {
+  padding: 0 !important;
+}

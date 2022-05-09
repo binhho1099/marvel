@@ -1,0 +1,98 @@
+.s2 {
+  position: relative;
+  background: url('../img/Assetss/BG2.jpg');
+  padding-bottom: 7rem;
+
+  @include res-xs {
+    padding-bottom: 5rem;
+  }
+  &__headline {
+    text-align: center;
+    padding-block: 50px;
+
+    & > img {
+      @include res-xs {
+        width: 90%;
+      }
+    }
+  }
+
+  &__main {
+    &-img {
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 17%;
+        height: 30%;
+        background: url('../img/Assetss/btn_play.png') center no-repeat;
+        background-size: contain;
+
+        @include absolute();
+        cursor: pointer;
+      }
+
+      & img:first-child {
+        width: 100%;
+      }
+
+      & img:last-child {
+        position: absolute;
+        width: 94%;
+        top: 6%;
+        left: 3%;
+
+        @include res-xs {
+          width: 90%;
+          left: 5%;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 2rem;
+    position: relative;
+
+    &-item {
+      color: $color-white;
+      & span {
+        @include lineLimit(2);
+      }
+
+      & img {
+        cursor: pointer;
+        transition: all 0.2s linear;
+      }
+
+      & img:hover {
+        transform: scale(1.05);
+        filter: invert(5%);
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    &--left {
+      position: absolute;
+      top: 35%;
+      right: 10%;
+      cursor: pointer;
+      transition: all 0.2s linear;
+    }
+    &--right {
+      position: absolute;
+      top: 35%;
+      left: 10%;
+      cursor: pointer;
+      transition: all 0.2s linear;
+    }
+
+    &--left:hover,
+    &--right:hover {
+      transform: scale(1.2);
+    }
+  }
+}

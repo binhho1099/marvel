@@ -1,0 +1,209 @@
+.s1 {
+  // S1 TOP
+  &-top {
+    height: calc(100vh - $height-header);
+    background: url('../img/Assetss/section-banner-bg.png') no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__logo {
+      position: absolute;
+      top: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include res-xs {
+        top: 2rem;
+      }
+    }
+
+    &__banner {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      @include res-xs {
+        width: 180%;
+        bottom: 15%;
+        left: -20%;
+      }
+      @include res-md {
+        bottom: 8%;
+        width: 130%;
+      }
+      @include res-sm {
+        bottom: 10%;
+        width: 150%;
+      }
+
+      &-shape {
+        width: 100%;
+      }
+
+      &-car1 {
+        position: absolute;
+        width: 38%;
+        top: 22%;
+        left: 20%;
+
+        filter: drop-shadow(-10px 25px 20px #000);
+        animation: showCar 1s linear, car 0.1s 1s infinite;
+
+        & img {
+          width: 100%;
+        }
+
+        &::before {
+          content: '';
+          width: 80%;
+          height: 100%;
+          position: absolute;
+
+          top: -45px;
+          left: 55%;
+          background: url(../img/Assetss/car-red-blur.png) no-repeat;
+          background-size: contain;
+
+          opacity: 0.8;
+        }
+      }
+      &-car2 {
+        position: absolute;
+        width: 22%;
+        top: 5%;
+        left: 70%;
+
+        filter: drop-shadow(-10px 25px 20px #000);
+        animation: showCar 1s linear, car 0.1s 1s infinite;
+
+        & img {
+          width: 100%;
+        }
+
+        @include res-xs {
+          display: none;
+        }
+        @include res-sm {
+          display: none;
+        }
+        @include res-md {
+          display: none;
+        }
+
+        &::before {
+          content: '';
+          width: 80%;
+          height: 100%;
+          position: absolute;
+
+          top: -55px;
+          left: 55%;
+          background: url(../img/Assetss/car-green-blur.png) no-repeat;
+          background-size: contain;
+
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      grid-gap: 1rem;
+      cursor: pointer;
+
+      @include absolute('horizontal');
+      bottom: 30px;
+
+      @include res-xs {
+        width: 100%;
+        justify-content: space-evenly;
+        grid-gap: 0;
+      }
+
+      & img:first-child,
+      & img:last-child {
+        animation: btn 2s infinite;
+      }
+
+      &-child {
+        @include res-xs {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  // S1 BOTTOM**********************************
+
+  &-bottom {
+    height: 100vh;
+    position: relative;
+    background: url('../img/Assetss/BG1.jpg') bottom;
+
+    @include res-xs {
+      height: auto;
+      padding-bottom: 50px;
+    }
+    @include res-sm {
+      height: auto;
+      padding-bottom: 50px;
+    }
+    @include res-md {
+      height: auto;
+      padding-bottom: 50px;
+    }
+    @include res-lg {
+      height: auto;
+      padding-bottom: 50px;
+    }
+
+    &__headline {
+      text-align: center;
+      padding-top: 5rem;
+
+      & > img {
+        @include res-xs {
+          width: 90%;
+        }
+      }
+    }
+    &__img {
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 30%;
+        height: 30%;
+        background: url('../img/Assetss/btn_play.png') center no-repeat;
+
+        background-size: contain;
+        @include absolute();
+        cursor: pointer;
+      }
+    }
+    &__video {
+      @include res-sm {
+        margin-top: 95px !important;
+      }
+      @include res-lg {
+        margin-top: 80px !important;
+      }
+
+      & img:first-child {
+        width: 100%;
+      }
+      &--1 {
+        position: absolute;
+        left: 3%;
+        top: 6.5%;
+        width: 94%;
+
+        @include res-xs {
+          width: 90%;
+          left: 5%;
+        }
+      }
+    }
+  }
+}

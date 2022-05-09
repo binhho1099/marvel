@@ -1,0 +1,19 @@
+.header {
+  &__bg {
+    display: flex;
+    height: $height-header;
+    background: url('../img/Assetss/ta_logo_bg.png');
+
+    @include res-xs {
+      height: #{$height-header - 30px};
+    }
+    & a {
+      display: block;
+      margin: auto;
+      height: 100%;
+    }
+    & img {
+      height: 100%;
+    }
+  }
+}

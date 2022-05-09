@@ -1,0 +1,47 @@
+.footer {
+  position: relative;
+  background-color: #212121;
+  padding-bottom: 50px;
+
+  &-top {
+    text-align: center;
+    background: url('../img/Assetss/BG7.png');
+
+    &__text img {
+      @include res-xs {
+        width: 80%;
+      }
+    }
+
+    &__company {
+      & img {
+        cursor: pointer;
+      }
+
+      & > div {
+        max-width: 80%;
+        margin: 0 auto;
+
+        @include res-xs {
+          max-width: 100%;
+        }
+        @include res-sm {
+          max-width: 100%;
+        }
+        @include res-md {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    &__company {
+      & img {
+        @include res-xs {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

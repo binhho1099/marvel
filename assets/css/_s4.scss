@@ -1,0 +1,25 @@
+.s4 {
+  background: url('../img/Assetss/BG2.jpg') no-repeat center;
+  background-size: cover;
+
+  &__colection {
+    padding: 30px 0;
+    cursor: pointer;
+
+    @include res-xs {
+      width: 90%;
+    }
+    @include res-sm {
+      width: 90%;
+    }
+  }
+  &__btn {
+    padding-bottom: 3rem;
+    cursor: pointer;
+    animation: zoom 1.8s infinite;
+
+    @include res-xs {
+      width: 80%;
+    }
+  }
+}

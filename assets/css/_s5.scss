@@ -1,0 +1,42 @@
+.s5 {
+  position: relative;
+  overflow-y: hidden;
+  height: 100vh;
+  background: url('../img/Assetss/section-play-game-banner.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include res-xs {
+    height: 60vh;
+  }
+  @include res-sm {
+    height: 70vh;
+  }
+
+  &__banner {
+    width: 100%;
+    object-fit: cover;
+
+    @include res-xs {
+      transform: scale(1.2);
+    }
+  }
+
+  &__headline {
+    @include absolute('horizontal');
+    top: 2%;
+    width: 60%;
+
+    @include res-xs {
+      width: 80%;
+    }
+  }
+
+  &__play {
+    @include absolute('horizontal');
+    bottom: 1%;
+    animation: zoomplay 1.5s infinite;
+  }
+}

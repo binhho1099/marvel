@@ -1,0 +1,164 @@
+// variable
+$color-pink: #fc486b;
+$color-cyan: #44ffff;
+$color-white: #fff;
+$height-header: 80px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+.content {
+  background-color: #000;
+}
+img {
+  display: inline-block;
+}
+
+// Line section
+.section-line {
+  height: 43px;
+  width: 100%;
+  background-image: url('../img/Assetss/BG3_LINE.jpg');
+  position: absolute;
+  bottom: 0;
+
+  @include res-xs {
+    height: 28px;
+  }
+}
+.section-line--2 {
+  height: 43px;
+  background: url('../img/Assetss/BG4_LINE.jpg') no-repeat;
+  background-size: cover;
+
+  @include res-xs {
+    height: 28px;
+  }
+}
+
+// làm mờ nút nhấn
+.disable {
+  filter: brightness(50%);
+}
+
+@mixin absolute($direction: 'center') {
+  position: absolute;
+  @if $direction == 'center' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $direction == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $direction == 'horizontal' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin flex($justify: 'center') {
+  display: flex;
+  align-items: center;
+  @if $justify == 'center' {
+    justify-content: center;
+  }
+  @if $justify == 'between' {
+    justify-content: space-between;
+  }
+  @if $justify == 'around' {
+    justify-content: space-around;
+  }
+}
+
+@mixin lineLimit($n) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// ANIMATION
+@keyframes showCar {
+  from {
+    transform: translate3d(100px, -62px, -135px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes car {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes btn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomplay {
+  0%,
+  100% {
+    width: 50%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes product {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
