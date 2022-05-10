@@ -1,98 +1,54 @@
 .s2 {
-  position: relative;
   background: url('../img/Assetss/BG2.jpg');
-  padding-bottom: 7rem;
+  padding-block: 55px;
 
-  @include res-xs {
-    padding-bottom: 5rem;
-  }
   &__headline {
     text-align: center;
-    padding-block: 50px;
-
-    & > img {
-      @include res-xs {
-        width: 90%;
-      }
-    }
   }
 
-  &__main {
-    &-img {
-      position: relative;
-
-      &:after {
-        content: '';
-        width: 17%;
-        height: 30%;
-        background: url('../img/Assetss/btn_play.png') center no-repeat;
-        background-size: contain;
-
-        @include absolute();
-        cursor: pointer;
-      }
-
-      & img:first-child {
-        width: 100%;
-      }
-
-      & img:last-child {
-        position: absolute;
-        width: 94%;
-        top: 6%;
-        left: 3%;
-
-        @include res-xs {
-          width: 90%;
-          left: 5%;
-        }
-      }
-    }
+  &__video {
+    @extend .s1-bottom__video;
+    background-image: url('../img/Assetss/S2_Videoframe.png');
+    margin: 45px auto 20px;
   }
 
   &__slider {
-    margin-top: 2rem;
-    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
 
-    &-item {
-      color: $color-white;
-      & span {
-        @include lineLimit(2);
-      }
-
-      & img {
-        cursor: pointer;
-        transition: all 0.2s linear;
-      }
-
-      & img:hover {
-        transform: scale(1.05);
-        filter: invert(5%);
-      }
+    @include res-sm {
+      max-width: 90%;
+    }
+    @include res-xs {
+      max-width: 90%;
     }
   }
 
-  &__btn {
-    position: relative;
-
-    &--left {
-      position: absolute;
-      top: 35%;
-      right: 10%;
-      cursor: pointer;
-      transition: all 0.2s linear;
-    }
-    &--right {
-      position: absolute;
-      top: 35%;
-      left: 10%;
-      cursor: pointer;
-      transition: all 0.2s linear;
-    }
-
-    &--left:hover,
-    &--right:hover {
-      transform: scale(1.2);
+  &__item {
+    &:not(.active) > img {
+      opacity: 0.5;
     }
   }
+
+  &__title {
+    color: $color-white;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+// slider
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  left: -70px;
+}
+
+.owl-next {
+  right: -70px;
 }

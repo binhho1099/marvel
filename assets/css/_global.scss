@@ -2,7 +2,7 @@
 $color-pink: #fc486b;
 $color-cyan: #44ffff;
 $color-white: #fff;
-$height-header: 80px;
+$height-header: 93px;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *,
@@ -28,7 +28,7 @@ a {
   display: block;
   text-decoration: none;
 }
-.content {
+body {
   background-color: #000;
 }
 img {
@@ -101,11 +101,38 @@ img {
   text-overflow: ellipsis;
 }
 
+@mixin animationBtnScroll($time) {
+  animation: btn $time infinite;
+}
+
+.grid {
+  display: block;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include res-xl {
+    max-width: 1140px;
+  }
+  @include res-lg {
+    max-width: 960px;
+  }
+  @include res-md {
+    max-width: 720px;
+  }
+  @include res-sm {
+    max-width: 540px;
+  }
+  @include res-xs {
+    max-width: 100%;
+  }
+}
+
 // ANIMATION
 @keyframes showCar {
   from {
     transform: translate3d(100px, -62px, -135px);
-    opacity: 0.9;
+    opacity: 0.5;
   }
   to {
     transform: translate3d(0);
@@ -151,6 +178,16 @@ img {
   }
   50% {
     transform: scale(1.2);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(150%);
   }
 }
 

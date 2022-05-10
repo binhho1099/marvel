@@ -7,6 +7,7 @@ const character2 = document.querySelector('.s3-bottom__product-2');
 const listProduct1 = document.querySelector('.js-list-product-1');
 const listProduct2 = document.querySelector('.js-list-product-2');
 const modalContent = document.querySelector('#modal-content');
+
 const app = {
   data: {
     racing: [
@@ -70,7 +71,7 @@ const app = {
   </div>`;
   },
   dataListProduct2: function (data) {
-    return `<div class="col-6 col-md-4">
+    return `<div class="col-6 col-md-4 s3-bottom__card-2">
     <img
       onclick="app.showModal('Popup_${data}')"
       src="./assets/img/Assetss/Character Cards/${data}.png"

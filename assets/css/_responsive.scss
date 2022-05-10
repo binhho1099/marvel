@@ -18,6 +18,11 @@
     @content;
   }
 }
+@mixin res-xl {
+  @media (min-width: #{1200px + 1px}) and (max-width: 1400px) {
+    @content;
+  }
+}
 @include res-xs() {
   .col-0 {
     display: none;

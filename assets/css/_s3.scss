@@ -106,8 +106,9 @@
     }
 
     & h2 {
+      font-size: 24px;
+      font-weight: 500;
       color: $color-white;
-      font-weight: 400;
       margin: 3rem 0;
       text-align: center;
 
@@ -153,7 +154,7 @@
 
       & img:first-child,
       & img:last-child {
-        animation: btn 1.5s infinite;
+        @include animationBtnScroll(1s);
       }
     }
 
@@ -194,21 +195,25 @@
           width: 90%;
         }
       }
-
-      &-list-2 img {
-        width: 100%;
-        transition: all 0.2s ease-out;
-      }
-      &-list-2 img:hover {
-        cursor: pointer;
-        transform: translateY(-5px);
-      }
     }
 
-    &__card img {
-      width: 100%;
-      margin-top: 1rem;
-      transition: all 0.2s ease-out;
+    &__card {
+      height: 130px;
+      margin-top: 20px;
+      text-align: end;
+      & img {
+        height: 100%;
+        transition: all 0.2s ease-out;
+      }
+
+      &-2 {
+        height: 157px;
+        margin-top: 15px;
+        text-align: end;
+        & img {
+          height: 100%;
+        }
+      }
     }
     &__card img:hover {
       cursor: pointer;

@@ -1,19 +1,28 @@
 .s1 {
   // S1 TOP
   &-top {
-    height: calc(100vh - $height-header);
+    height: 90vh;
     background: url('../img/Assetss/section-banner-bg.png') no-repeat;
+    background-position: 0 0;
     background-size: cover;
     position: relative;
 
+    @include res-xs {
+      height: 80vh;
+    }
+
     &__logo {
       position: absolute;
-      top: 3rem;
+      top: 3.5rem;
       left: 50%;
       transform: translateX(-50%);
 
       @include res-xs {
         top: 2rem;
+      }
+
+      & > img {
+        width: 93%;
       }
     }
 
@@ -22,44 +31,45 @@
       position: absolute;
       bottom: 0;
 
-      @include res-xs {
-        width: 180%;
-        bottom: 15%;
-        left: -20%;
-      }
-      @include res-md {
-        bottom: 8%;
-        width: 130%;
-      }
-      @include res-sm {
-        bottom: 10%;
-        width: 150%;
-      }
-
       &-shape {
         width: 100%;
+        filter: drop-shadow(0 0 10px #000);
+
+        @include res-sm {
+          width: 180%;
+        }
+        @include res-xs {
+          width: 200%;
+        }
       }
 
       &-car1 {
         position: absolute;
-        width: 38%;
-        top: 22%;
-        left: 20%;
+        // width: 38%;
+        bottom: 22%;
+        left: 14%;
 
-        filter: drop-shadow(-10px 25px 20px #000);
-        animation: showCar 1s linear, car 0.1s 1s infinite;
+        @include res-lg {
+          width: 50%;
+        }
+        @include res-md {
+          width: 75%;
+        }
+
+        filter: drop-shadow(-10px 25px 40px #000);
 
         & img {
           width: 100%;
+          animation: showCar 1s linear, car 0.3s 1s infinite;
         }
 
         &::before {
           content: '';
-          width: 80%;
+          width: 100%;
           height: 100%;
           position: absolute;
 
-          top: -45px;
+          top: -75px;
           left: 55%;
           background: url(../img/Assetss/car-red-blur.png) no-repeat;
           background-size: contain;
@@ -69,15 +79,14 @@
       }
       &-car2 {
         position: absolute;
-        width: 22%;
-        top: 5%;
-        left: 70%;
+        bottom: 69%;
+        right: 6%;
 
         filter: drop-shadow(-10px 25px 20px #000);
-        animation: showCar 1s linear, car 0.1s 1s infinite;
 
         & img {
           width: 100%;
+          animation: showCar 1s linear, car 0.3s 1s infinite;
         }
 
         @include res-xs {
@@ -89,15 +98,18 @@
         @include res-md {
           display: none;
         }
+        @include res-lg {
+          width: 30%;
+        }
 
         &::before {
           content: '';
-          width: 80%;
+          width: 100%;
           height: 100%;
           position: absolute;
 
           top: -55px;
-          left: 55%;
+          left: 40%;
           background: url(../img/Assetss/car-green-blur.png) no-repeat;
           background-size: contain;
 
@@ -117,18 +129,16 @@
 
       @include res-xs {
         width: 100%;
-        justify-content: space-evenly;
-        grid-gap: 0;
+        justify-content: center;
       }
 
       & img:first-child,
       & img:last-child {
-        animation: btn 2s infinite;
+        @include animationBtnScroll(1s);
       }
-
       &-child {
         @include res-xs {
-          width: 80%;
+          width: 70%;
         }
       }
     }
@@ -137,30 +147,26 @@
   // S1 BOTTOM**********************************
 
   &-bottom {
-    height: 100vh;
+    padding-block: 68px;
     position: relative;
     background: url('../img/Assetss/BG1.jpg') bottom;
 
     @include res-xs {
       height: auto;
-      padding-bottom: 50px;
     }
     @include res-sm {
       height: auto;
-      padding-bottom: 50px;
     }
     @include res-md {
       height: auto;
-      padding-bottom: 50px;
     }
     @include res-lg {
       height: auto;
-      padding-bottom: 50px;
     }
 
     &__headline {
       text-align: center;
-      padding-top: 5rem;
+      margin-bottom: 45px;
 
       & > img {
         @include res-xs {
@@ -183,26 +189,22 @@
       }
     }
     &__video {
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 2.8% 2% 2.15% 2%;
+      background-image: url('../img/Assetss/S1_Videoframe.png');
+      background-size: 100% 100%;
+      background-position: center;
+
+      @include res-xs {
+        max-width: 90%;
+      }
       @include res-sm {
-        margin-top: 95px !important;
-      }
-      @include res-lg {
-        margin-top: 80px !important;
+        max-width: 90%;
       }
 
-      & img:first-child {
+      & video {
         width: 100%;
-      }
-      &--1 {
-        position: absolute;
-        left: 3%;
-        top: 6.5%;
-        width: 94%;
-
-        @include res-xs {
-          width: 90%;
-          left: 5%;
-        }
       }
     }
   }

@@ -1,11 +1,8 @@
 .s4 {
   background: url('../img/Assetss/BG2.jpg') no-repeat center;
   background-size: cover;
-
+  padding: 40px 0;
   &__colection {
-    padding: 30px 0;
-    cursor: pointer;
-
     @include res-xs {
       width: 90%;
     }
@@ -14,9 +11,8 @@
     }
   }
   &__btn {
-    padding-bottom: 3rem;
-    cursor: pointer;
-    animation: zoom 1.8s infinite;
+    margin-top: 20px;
+    animation: flicker 1s infinite;
 
     @include res-xs {
       width: 80%;
