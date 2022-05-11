@@ -1,7 +1,7 @@
 .s4 {
   background: url('../img/Assetss/BG2.jpg') no-repeat center;
   background-size: cover;
-  padding: 40px 0;
+  padding: 3.4% 0;
   &__colection {
     @include res-xs {
       width: 90%;
@@ -11,7 +11,7 @@
     }
   }
   &__btn {
-    margin-top: 20px;
+    margin-top: 2%;
     animation: flicker 1s infinite;
 
     @include res-xs {

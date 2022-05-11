@@ -11,9 +11,10 @@
       height: 80vh;
     }
 
+    // LOGO
     &__logo {
       position: absolute;
-      top: 3.5rem;
+      top: 5%;
       left: 50%;
       transform: translateX(-50%);
 
@@ -26,6 +27,7 @@
       }
     }
 
+    // CAR
     &__banner {
       width: 100%;
       position: absolute;
@@ -118,6 +120,7 @@
       }
     }
 
+    // BTN SCROLL
     &__btn {
       display: flex;
       align-items: center;
@@ -125,7 +128,7 @@
       cursor: pointer;
 
       @include absolute('horizontal');
-      bottom: 30px;
+      bottom: 4%;
 
       @include res-xs {
         width: 100%;
@@ -147,26 +150,14 @@
   // S1 BOTTOM**********************************
 
   &-bottom {
-    padding-block: 68px;
+    padding-block: 5.5%;
     position: relative;
     background: url('../img/Assetss/BG1.jpg') bottom;
-
-    @include res-xs {
-      height: auto;
-    }
-    @include res-sm {
-      height: auto;
-    }
-    @include res-md {
-      height: auto;
-    }
-    @include res-lg {
-      height: auto;
-    }
+    height: auto;
 
     &__headline {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 4%;
 
       & > img {
         @include res-xs {

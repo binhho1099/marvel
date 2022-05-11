@@ -85,157 +85,212 @@
   }
 
   &-bottom {
-    @include flex();
-    flex-direction: column;
-    margin-top: 15%;
-    padding-bottom: 30px;
-
-    &-2 {
-      margin-top: 10%;
-    }
-
-    @include res-xs {
-      margin-top: 15%;
-    }
-
+    // headline
     &__headline {
       text-align: center;
+      padding-top: 17%;
+
       & img {
-        width: 90%;
+        @include res-sm {
+          width: 95%;
+        }
+        @include res-xs {
+          width: 95%;
+        }
+      }
+      // mini
+      &.racing_mini {
+        padding-top: 8%;
       }
     }
 
-    & h2 {
+    // SUB HEADLINE
+    &__sub-headline {
       font-size: 24px;
       font-weight: 500;
+      line-height: 1.6;
       color: $color-white;
-      margin: 3rem 0;
+
       text-align: center;
+      margin: 2% 0 3%;
 
       @include res-xs {
-        margin: 1.5rem 0;
-        font-size: 1.6rem;
+        font-size: 16px;
       }
     }
 
-    &__banner {
+    // LABEL
+    &__label {
       text-align: center;
-
       & img {
-        width: 90%;
+        width: 95%;
       }
     }
-
+    // BTN SCROLL
     &__btn {
-      @include flex('center');
-      grid-gap: 10px;
-      width: 100%;
-      margin: 3rem 0;
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1%;
+      margin: 1.5% 0 2.5%;
 
-      @include res-xs {
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 2rem 0;
-        grid-gap: 0;
-      }
-      @include res-xs {
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 2rem 0;
-        grid-gap: 0;
-      }
-
-      & img:nth-child(2) {
+      &-icon {
+        height: auto;
+        animation: btn 1s linear infinite;
         @include res-xs {
-          width: 85%;
+          width: 10%;
         }
       }
 
-      & img:first-child,
-      & img:last-child {
-        @include animationBtnScroll(1s);
+      &-text {
+        @include res-xs {
+          width: 90%;
+        }
+      }
+    }
+    // 2 WAVE
+    &__wave {
+      display: flex;
+      justify-content: center;
+      gap: 3%;
+      cursor: pointer;
+
+      @include res-sm {
+        gap: 0;
+      }
+      @include res-xs {
+        gap: 0;
+      }
+      & img {
+        width: 40%;
+
+        @include res-md {
+          width: 45%;
+        }
+        @include res-sm {
+          width: 50%;
+        }
+        @include res-xs {
+          width: 50%;
+        }
+      }
+    }
+
+    // List Product
+    &__frame-product {
+      max-width: 1035px;
+      margin: 0 auto;
+      padding: 2.5% 2%;
+      background-size: 100% 100%;
+      background-position: center;
+
+      &.frame-venomized {
+        background-image: url('../img/Assetss/frame-red.png');
+      }
+      &.frame-original {
+        background-image: url('../img/Assetss/frame-blue.png');
+      }
+    }
+    &__list-product {
+      // display: flex;
+      // flex-wrap: wrap;
+      // gap: 20px;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 142px);
+      grid-gap: 10px;
+      // 142
+
+      @include res-md {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 120px);
+        grid-gap: 15px;
+      }
+      // 120
+      @include res-sm {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 130px);
+        grid-gap: 10px;
+      }
+      @include res-xs {
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+      }
+
+      &.racing_mini {
+        max-width: 60%;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 145px 145px;
+        grid-gap: 10px;
+
+        @include res-md {
+          max-width: 100%;
+          grid-template-rows: 164px 164px;
+        }
+        @include res-sm {
+          max-width: 100%;
+          grid-template-rows: 122px 122px;
+        }
+        @include res-xs {
+          max-width: 100%;
+          grid-template-rows: auto;
+        }
       }
     }
 
     &__product {
-      background-image: linear-gradient(
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-      );
-      border: 5px solid $color-pink;
-      padding: 20px;
-
-      @include res-xs {
-        max-height: 550px;
-        overflow-y: scroll;
-        padding: 10px;
-        margin: 0;
-      }
-
-      @include res-sm {
-        margin: 0;
-      }
-
-      &-2 {
-        max-height: max-content;
-        border-color: $color-cyan;
-      }
-
-      &-headline {
-        width: 50%;
-
-        @include res-xs {
-          width: 90%;
-        }
-        @include res-md {
-          width: 80%;
-        }
-        @include res-sm {
-          width: 90%;
-        }
-      }
-    }
-
-    &__card {
-      height: 130px;
-      margin-top: 20px;
-      text-align: end;
-      & img {
-        height: 100%;
-        transition: all 0.2s ease-out;
-      }
-
-      &-2 {
-        height: 157px;
-        margin-top: 15px;
-        text-align: end;
-        & img {
-          height: 100%;
-        }
-      }
-    }
-    &__card img:hover {
+      width: 100%;
+      // flex: 0 0 auto;
+      // max-width: calc(20% - 16px);
       cursor: pointer;
-      transform: translateY(-5px);
-    }
-    &__selector {
-      justify-content: space-evenly;
-      align-items: center;
+
+      // &.racing_mini {
+      //   max-width: calc(33.33% - 16px);
+      // }
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      // @include res-lg {
+      //   max-width: calc(20% - 16px);
+      // }
+      // @include res-md {
+      //   max-width: calc(25% - 16px);
+      // }
+      // @include res-sm {
+      //   max-width: calc(33.33% - 16px);
+      // }
+      // @include res-xs {
+      //   max-width: calc(33.33% - 16px);
+      // }
 
       & img {
-        width: 45%;
-        cursor: pointer;
+        width: 100%;
+      }
 
-        @include res-xs {
-          width: 50%;
-          object-fit: cover;
-        }
-        @include res-sm {
-          width: 50%;
-          object-fit: cover;
+      &-title {
+        text-align: center;
+        margin-bottom: 2.5%;
+
+        & img {
+          height: auto;
+
+          @include res-xs {
+            width: 100%;
+          }
         }
       }
     }
+  }
+
+  &__racing-original,
+  &__racing-venomized,
+  &__mini-original,
+  &__mini-venomized {
+    padding-bottom: 6.5%;
   }
 }

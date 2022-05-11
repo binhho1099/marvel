@@ -35,6 +35,13 @@ img {
   display: inline-block;
 }
 
+.hiden {
+  display: none !important;
+}
+.btn-disable {
+  filter: brightness(50%);
+}
+
 // Line section
 .section-line {
   height: 43px;
@@ -177,7 +184,7 @@ img {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -188,14 +195,5 @@ img {
   }
   50% {
     filter: brightness(150%);
-  }
-}
-
-@keyframes product {
-  from {
-    transform: translateY(-5px);
-  }
-  to {
-    transform: translate(0);
   }
 }

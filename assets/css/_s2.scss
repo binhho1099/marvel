@@ -1,6 +1,6 @@
 .s2 {
   background: url('../img/Assetss/BG2.jpg');
-  padding-block: 55px;
+  padding-block: 4.5%;
 
   &__headline {
     text-align: center;
@@ -9,7 +9,11 @@
   &__video {
     @extend .s1-bottom__video;
     background-image: url('../img/Assetss/S2_Videoframe.png');
-    margin: 45px auto 20px;
+    margin: 4% auto 2%;
+
+    & video {
+      aspect-ratio: 16/9;
+    }
   }
 
   &__slider {
@@ -43,6 +47,7 @@
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
+  animation: zoom 1.5s infinite;
 }
 
 .owl-prev {
