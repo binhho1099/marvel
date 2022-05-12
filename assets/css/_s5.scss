@@ -22,10 +22,10 @@
     text-align: center;
     & img {
       @include res-sm {
-        width: 100%;
+        width: 80%;
       }
       @include res-xs {
-        width: 100%;
+        width: 80%;
       }
     }
   }

@@ -128,7 +128,7 @@ img {
     max-width: 720px;
   }
   @include res-sm {
-    max-width: 540px;
+    max-width: 100%;
   }
   @include res-xs {
     max-width: 100%;

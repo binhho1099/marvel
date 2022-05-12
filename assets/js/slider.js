@@ -1,8 +1,10 @@
-const sliderS2ListItem = document.querySelectorAll('.s2__item');
 const video = document.querySelector('.s2__video-item');
 const thumbnailVideo = document.querySelector('.s2__video-thumbnail');
-// JS VIDEO SLIDER
+const modal = document.querySelector('#modal');
+
+// seclect item active
 const handleActiveThumbnail = id => {
+  const sliderS2ListItem = document.querySelectorAll('.s2__item');
   sliderS2ListItem.forEach(item => {
     item.classList.remove('active');
   });
@@ -13,14 +15,10 @@ const handleActiveThumbnail = id => {
   });
 };
 
-// handleActiveThumbnail(1);
+// play video
 function chanceVideo(id) {
   video.setAttribute('src', `./assets/videos/video_${id}.mp4`);
   video.play();
-}
-
-function handleClickSelectItemSlider() {
-  const id = this.dataset.id;
 }
 $(document).ready(function () {
   // carousel modal
@@ -38,7 +36,6 @@ $(document).ready(function () {
   // corousel video s2
   $('.owl-video').owlCarousel({
     loop: true,
-    // rewind: true,
     margin: 20,
     dots: false,
     nav: true,
@@ -56,32 +53,43 @@ $(document).ready(function () {
       },
     },
   });
+
+  // handle click item slider
   handleActiveThumbnail(1);
   $('.owl-video').on('click', '.item', function (e) {
     const id = e.target.parentElement.dataset.id;
     handleActiveThumbnail(id);
-    // handleActiveThumbnail();
-    // e.target.parentElement.classList.add('active');
     chanceVideo(id);
   });
 
+  // Modal list popup
   const products = document.querySelectorAll('.s3-bottom__product');
   products.forEach(product =>
     product.addEventListener('click', function (e) {
       const itemModalName = e.target.dataset.modalName;
       const index = e.target.dataset.indexModal;
       const modals = document.querySelectorAll('.owl-modal');
-      $(`#owl-modal-${itemModalName}`).trigger('to.owl.carousel', [
-        index,
-        1,
-        true,
-      ]);
+      $(`#owl-modal-${itemModalName}`).trigger('to.owl.carousel', [index, 1]);
       modals.forEach(modal =>
         modal.dataset.modalName === itemModalName
           ? modal.classList.remove('hiden')
           : modal.classList.add('hiden')
       );
-      $('#myModal').modal('show');
+      modal.classList.remove('hiden');
     })
   );
+});
+
+// MODAL
+const modalContainer = document.querySelector('.js-modal-container');
+modal.addEventListener('click', function () {
+  modal.classList.add('hiden');
+});
+modalContainer.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+const modalBtn = document.querySelector('.modal-btn-close');
+modalBtn.addEventListener('click', function () {
+  modal.classList.add('hiden');
 });

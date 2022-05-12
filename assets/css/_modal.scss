@@ -1,20 +1,54 @@
-.modal-content {
-  background-color: transparent;
-}
-
-.modal-content img {
-  width: 100%;
-  object-fit: contain;
-  image-rendering: crisp-edges;
-}
-
-// class modal
-.modal-open {
-  padding: 0 !important;
-}
-
-.modal-content {
-  border: 0 !important;
-  width: 765px;
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &-content {
+    position: relative;
+    background-color: transparent;
+    border: 0 !important;
+    width: 50vw;
+    justify-content: center;
+    margin: 0 auto;
+
+    // @include res-md {
+    //   width: 60vw;
+    // }
+    @include res-sm {
+      width: 70vw;
+    }
+    @include res-xs {
+      width: 80vw;
+    }
+  }
+
+  &-btn-close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 2;
+
+    text-align: center;
+    cursor: pointer;
+    & img {
+      width: 100%;
+      filter: drop-shadow(0 0 10px #fff);
+
+      @include res-xs {
+        width: 50%;
+      }
+      @include res-sm {
+        width: 80%;
+      }
+    }
+  }
+}
+.owl-modal-venomized-racing {
+  overflow-y: hidden;
 }

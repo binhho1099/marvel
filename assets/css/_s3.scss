@@ -103,7 +103,6 @@
         padding-top: 8%;
       }
     }
-
     // SUB HEADLINE
     &__sub-headline {
       font-size: 24px;
@@ -243,35 +242,15 @@
 
     &__product {
       width: 100%;
-      // flex: 0 0 auto;
-      // max-width: calc(20% - 16px);
       cursor: pointer;
 
-      // &.racing_mini {
-      //   max-width: calc(33.33% - 16px);
-      // }
       & img {
         width: 100%;
         height: 100%;
+        @include res-xs {
+          aspect-ratio: 4/3;
+        }
       }
-
-      // @include res-lg {
-      //   max-width: calc(20% - 16px);
-      // }
-      // @include res-md {
-      //   max-width: calc(25% - 16px);
-      // }
-      // @include res-sm {
-      //   max-width: calc(33.33% - 16px);
-      // }
-      // @include res-xs {
-      //   max-width: calc(33.33% - 16px);
-      // }
-
-      & img {
-        width: 100%;
-      }
-
       &-title {
         text-align: center;
         margin-bottom: 2.5%;
