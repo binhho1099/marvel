@@ -1,6 +1,27 @@
 const video = document.querySelector('.s2__video-item');
 const thumbnailVideo = document.querySelector('.s2__video-thumbnail');
-const modal = document.querySelector('#modal');
+const modal = document.querySelector('#myModal');
+const iconReplayS2 = document.querySelector('.s2__video-icon-replay');
+const iconReplayS1 = document.querySelector('.s1-bottom__video-icon-replay');
+const videoS1 = document.querySelector('.s1-bottom__video-item');
+
+videoS1.addEventListener('ended', function () {
+  iconReplayS1.classList.remove('hiden');
+});
+
+iconReplayS1.addEventListener('click', function () {
+  this.classList.add('hiden');
+  videoS1.play();
+});
+
+video.addEventListener('ended', function () {
+  iconReplayS2.classList.remove('hiden');
+});
+
+iconReplayS2.addEventListener('click', function () {
+  this.classList.add('hiden');
+  video.play();
+});
 
 // seclect item active
 const handleActiveThumbnail = id => {
@@ -28,6 +49,10 @@ $(document).ready(function () {
     margin: 10,
     dots: false,
     nav: true,
+    itemsDesktop: false,
+    itemsDesktopSmall: false,
+    itemsTablet: false,
+    itemsMobile: false,
     navText: [
       '<img src="./assets/img/Assetss/arrow_left.png" alt="arrow_left">',
       '<img src="./assets/img/Assetss/arrow_right.png" alt="arrow_right">',
@@ -69,27 +94,22 @@ $(document).ready(function () {
       const itemModalName = e.target.dataset.modalName;
       const index = e.target.dataset.indexModal;
       const modals = document.querySelectorAll('.owl-modal');
-      $(`#owl-modal-${itemModalName}`).trigger('to.owl.carousel', [index, 1]);
-      modals.forEach(modal =>
-        modal.dataset.modalName === itemModalName
-          ? modal.classList.remove('hiden')
-          : modal.classList.add('hiden')
-      );
-      modal.classList.remove('hiden');
+
+      $('#myModal').on('shown.bs.modal', function () {
+        modals.forEach(modal =>
+          modal.dataset.modalName !== itemModalName
+            ? modal.classList.add('hiden')
+            : modal.classList.remove('hiden')
+        );
+        $(`#owl-modal-${itemModalName}`).trigger('to.owl.carousel', [index, 1]);
+      });
+
+      $('#myModal').modal('show');
     })
   );
 });
 
-// MODAL
-const modalContainer = document.querySelector('.js-modal-container');
-modal.addEventListener('click', function () {
-  modal.classList.add('hiden');
-});
-modalContainer.addEventListener('click', function (e) {
-  e.stopPropagation();
-});
-
 const modalBtn = document.querySelector('.modal-btn-close');
 modalBtn.addEventListener('click', function () {
-  modal.classList.add('hiden');
+  $('#myModal').modal('hide');
 });

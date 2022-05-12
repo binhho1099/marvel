@@ -47,9 +47,9 @@
 
       &-car1 {
         position: absolute;
-        // width: 38%;
         bottom: 22%;
         left: 14%;
+        aspect-ratio: 16/9;
 
         @include res-lg {
           width: 50%;
@@ -58,6 +58,9 @@
           width: 75%;
         }
 
+        @include res-xs {
+          // bottom: 25%;
+        }
         filter: drop-shadow(-10px 25px 40px #000);
 
         & img {
@@ -71,8 +74,8 @@
           height: 100%;
           position: absolute;
 
-          top: -75px;
-          left: 55%;
+          top: -30%;
+          left: 50%;
           background: url(../img/Assetss/car-red-blur.png) no-repeat;
           background-size: contain;
 
@@ -110,7 +113,7 @@
           height: 100%;
           position: absolute;
 
-          top: -55px;
+          top: -37%;
           left: 40%;
           background: url(../img/Assetss/car-green-blur.png) no-repeat;
           background-size: contain;
@@ -186,6 +189,16 @@
       background-image: url('../img/Assetss/S1_Videoframe.png');
       background-size: 100% 100%;
       background-position: center;
+      position: relative;
+
+      &-icon-replay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 10;
+      }
 
       @include res-xs {
         max-width: 90%;

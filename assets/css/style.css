@@ -307,6 +307,7 @@ img {
   position: absolute;
   bottom: 22%;
   left: 14%;
+  aspect-ratio: 16/9;
   filter: drop-shadow(-10px 25px 40px #000);
 }
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -328,8 +329,8 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -75px;
-  left: 55%;
+  top: -30%;
+  left: 50%;
   background: url(../img/Assetss/car-red-blur.png) no-repeat;
   background-size: contain;
   opacity: 0.8;
@@ -369,7 +370,7 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -55px;
+  top: -37%;
   left: 40%;
   background: url(../img/Assetss/car-green-blur.png) no-repeat;
   background-size: contain;
@@ -436,6 +437,15 @@ img {
   background-image: url("../img/Assetss/S1_Videoframe.png");
   background-size: 100% 100%;
   background-position: center;
+  position: relative;
+}
+.s1-bottom__video-icon-replay, .s2__video-icon-replay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
 }
 @media (max-width: 576px) {
   .s1-bottom__video, .s2__video {
@@ -953,16 +963,8 @@ img {
   }
 }
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+.modal-dialog {
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 .modal-content {
   position: relative;
@@ -971,6 +973,11 @@ img {
   width: 50vw;
   justify-content: center;
   margin: 0 auto;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .modal-content {
+    width: 60vw;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .modal-content {
@@ -1003,10 +1010,6 @@ img {
   .modal-btn-close img {
     width: 80%;
   }
-}
-
-.owl-modal-venomized-racing {
-  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
