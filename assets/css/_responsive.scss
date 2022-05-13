@@ -1,3 +1,8 @@
+@mixin res-xxs {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
 @mixin res-xs {
   @media (max-width: 576px) {
     @content;

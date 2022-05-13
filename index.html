@@ -19,6 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- OWL CAROUSEL -->
@@ -30,6 +32,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
+
+    <!-- Link AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Marvel</title>
   </head>
@@ -48,7 +53,11 @@
           <!-- SECTION S1 -->
           <section class="s1">
             <div class="s1-top">
-              <div class="s1-top__logo">
+              <div
+                class="s1-top__logo"
+                data-aos="fade-in"
+                data-aos-duration="500"
+              >
                 <img src="./assets/img/Assetss/S1_Logo.png" alt="S1_logo" />
               </div>
 
@@ -60,12 +69,14 @@
                 />
                 <div class="s1-top__banner-car1">
                   <img
+                    id="car1"
                     src="./assets/img/Assetss/section-banner-car1.png"
                     alt="banner-car1"
                   />
                 </div>
                 <div class="s1-top__banner-car2">
                   <img
+                    id="car2"
                     src="./assets/img/Assetss/section-banner-car2.png"
                     alt="banner-car2"
                   />
@@ -93,14 +104,22 @@
             <div class="s1-bottom">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 s1-bottom__headline">
+                  <div
+                    class="col-12 s1-bottom__headline"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <img
                       src="./assets/img/Assetss/S1_Headline.png"
                       alt="S1_Headline"
                     />
                   </div>
                   <div class="col-12">
-                    <div class="s1-bottom__video">
+                    <div
+                      class="s1-bottom__video"
+                      data-aos="fade-in"
+                      data-aos-duration="1000"
+                    >
                       <video
                         class="s1-bottom__video-item"
                         src="./assets/videos/video_1.mp4"
@@ -112,6 +131,12 @@
                         <img
                           src="./assets/img/Assetss/btn_replay.png"
                           alt="btn-replay"
+                        />
+                      </div>
+                      <div class="s1-bottom__video-icon-play hiden">
+                        <img
+                          src="./assets/img/Assetss/btn_play.png"
+                          alt="btn_play"
                         />
                       </div>
                     </div>
@@ -128,7 +153,11 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <div class="s2__headline">
+                  <div
+                    class="s2__headline"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <img
                       src="./assets/img/Assetss/S2_Headline.png"
                       alt="S2_Headline"
@@ -136,7 +165,11 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="s2__video">
+                  <div
+                    class="s2__video"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <video
                       class="s2__video-item"
                       src="./assets/videos/video_1.mp4"
@@ -149,10 +182,20 @@
                         alt="btn_replay"
                       />
                     </div>
+                    <div class="s2__video-icon-play">
+                      <img
+                        src="./assets/img/Assetss/btn_play.png"
+                        alt="btn_play"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="s2__slider">
+                  <div
+                    class="s2__slider"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <div class="owl-carousel owl-theme owl-video">
                       <div class="item">
                         <div data-id="1" class="s2__item">
@@ -218,12 +261,16 @@
 
           <!-- SECTION S5 -->
           <section class="s5">
-            <!-- <img
+            <img
               class="s5__banner"
               src="./assets/img/Assetss/section-play-game-banner.png"
               alt=""
-            /> -->
-            <div class="s5__headline">
+            />
+            <div
+              class="s5__headline"
+              data-aos="fade-in"
+              data-aos-duration="500"
+            >
               <img
                 src="./assets/img/Assetss/section-play-game-title.png"
                 alt="section-play-game-title"
@@ -279,7 +326,11 @@
               <div class="container">
                 <div class="row">
                   <div class="col-12">
-                    <div class="s3-bottom__headline">
+                    <div
+                      class="s3-bottom__headline"
+                      data-aos="fade-in"
+                      data-aos-duration="300"
+                    >
                       <img
                         src="./assets/img/Assetss/S3_Headline.png"
                         alt="S3_Headline"
@@ -287,19 +338,31 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__sub-headline">
+                    <div
+                      class="s3-bottom__sub-headline"
+                      data-aos="fade-in"
+                      data-aos-duration="500"
+                    >
                       Collect all <b>30 RACING</b> models of your favorites
                       <b>MARVEL</b>
                       characters!
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__label">
+                    <div
+                      class="s3-bottom__label"
+                      data-aos="fade-in"
+                      data-aos-duration="500"
+                    >
                       <img src="./assets/img/Assetss/S3_RACING.png" alt="" />
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__btn">
+                    <div
+                      class="s3-bottom__btn"
+                      data-aos="fade-in"
+                      data-aos-duration="1000"
+                    >
                       <img
                         class="s3-bottom__btn-icon"
                         src="./assets/img/Assetss/scroll-icon-red.png"
@@ -319,7 +382,11 @@
                   </div>
 
                   <!-- list product RACING VENOMIZED -->
-                  <div class="col-12 s3__racing-venomized">
+                  <div
+                    class="col-12 s3__racing-venomized"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <div class="s3-bottom__wave">
                       <img src="./assets/img/Assetss/wave-2.png" alt="" />
                       <img
@@ -336,7 +403,11 @@
                         />
                       </div>
                       <div class="s3-bottom__list-product">
-                        <div class="s3-bottom__product test">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="0"
@@ -344,7 +415,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="1"
@@ -352,7 +427,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="2"
@@ -360,7 +439,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="3"
@@ -368,7 +451,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="4"
@@ -376,7 +463,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="5"
@@ -384,7 +475,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="6"
@@ -392,7 +487,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="7"
@@ -400,7 +499,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="8"
@@ -408,7 +511,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="9"
@@ -416,7 +523,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="10"
@@ -424,7 +535,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="11"
@@ -432,7 +547,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="12"
@@ -440,7 +559,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="13"
@@ -448,7 +571,11 @@
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product">
+                        <div
+                          class="s3-bottom__product"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="venomized-racing"
                             data-index-modal="14"
@@ -637,7 +764,11 @@
               <div class="container">
                 <div class="row">
                   <div class="col-12">
-                    <div class="s3-bottom__headline racing_mini">
+                    <div
+                      class="s3-bottom__headline racing_mini"
+                      data-aos="fade-in"
+                      data-aos-duration="300"
+                    >
                       <img
                         src="./assets/img/Assetss/S3_Headline.png"
                         alt="S3_Headline"
@@ -645,19 +776,31 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__sub-headline">
+                    <div
+                      class="s3-bottom__sub-headline"
+                      data-aos="fade-in"
+                      data-aos-duration="500"
+                    >
                       Collect all <b>30 RACING</b> models of your favorites
                       <b>MARVEL</b>
                       characters!
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__label">
+                    <div
+                      class="s3-bottom__label"
+                      data-aos="fade-in"
+                      data-aos-duration="500"
+                    >
                       <img src="./assets/img/Assetss/S3_RACING.png" alt="" />
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="s3-bottom__btn">
+                    <div
+                      class="s3-bottom__btn"
+                      data-aos="fade-in"
+                      data-aos-duration="1000"
+                    >
                       <img
                         class="s3-bottom__btn-icon"
                         src="./assets/img/Assetss/scroll-icon-red.png"
@@ -697,7 +840,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="1"
+                            data-index-modal="0"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_1.png"
                             alt=""
                           />
@@ -705,7 +848,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="2"
+                            data-index-modal="1"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_2.png"
                             alt=""
                           />
@@ -713,7 +856,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="3"
+                            data-index-modal="2"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_3.png"
                             alt=""
                           />
@@ -721,7 +864,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="4"
+                            data-index-modal="3"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_4.png"
                             alt=""
                           />
@@ -729,7 +872,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="5"
+                            data-index-modal="4"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_5.png"
                             alt=""
                           />
@@ -737,7 +880,7 @@
                         <div class="s3-bottom__product racing_mini">
                           <img
                             data-modal-name="venomized-mini-racing"
-                            data-index-modal="6"
+                            data-index-modal="5"
                             src="./assets/img/Assetss/Character Cards/Mini_W2_6.png"
                             alt=""
                           />
@@ -746,7 +889,11 @@
                     </div>
                   </div>
                   <!-- list product RACING MINI ORIGINAL -->
-                  <div class="col-12 s3__mini-original">
+                  <div
+                    class="col-12 s3__mini-original"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                  >
                     <div class="s3-bottom__wave">
                       <img
                         class="btn-disable wave-2-mini-active"
@@ -763,50 +910,74 @@
                         />
                       </div>
                       <div class="s3-bottom__list-product racing_mini">
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="1"
+                            data-index-modal="0"
                             src="./assets/img/Assetss/Character Cards/Mini_1.png"
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="2"
+                            data-index-modal="1"
                             src="./assets/img/Assetss/Character Cards/Mini_2.png"
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="3"
+                            data-index-modal="2"
                             src="./assets/img/Assetss/Character Cards/Mini_3.png"
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="4"
+                            data-index-modal="3"
                             src="./assets/img/Assetss/Character Cards/Mini_4.png"
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="5"
+                            data-index-modal="4"
                             src="./assets/img/Assetss/Character Cards/Mini_5.png"
                             alt=""
                           />
                         </div>
-                        <div class="s3-bottom__product racing_mini">
+                        <div
+                          class="s3-bottom__product racing_mini"
+                          data-aos="fade-in"
+                          data-aos-duration="500"
+                        >
                           <img
                             data-modal-name="original-mini-racing"
-                            data-index-modal="6"
+                            data-index-modal="5"
                             src="./assets/img/Assetss/Character Cards/Mini_6.png"
                             alt=""
                           />
@@ -821,7 +992,11 @@
 
           <!-- SECTION 4 -->
           <section class="s4 row">
-            <div class="col-12 text-center">
+            <div
+              class="col-12 text-center"
+              data-aos="fade-in"
+              data-aos-duration="500"
+            >
               <img
                 class="s4__colection"
                 src="./assets/img/Assetss/collector_poster.png"
@@ -849,29 +1024,68 @@
           <!-- FOOTER -->
           <footer class="footer d-flex flex-column">
             <div class="footer-top">
-              <div class="footer-top__text">
+              <div
+                class="footer-top__text"
+                data-aos="fade-in"
+                data-aos-duration="500"
+              >
                 <img src="./assets/img/Assetss/AVAILABLE AT.png" alt="" />
               </div>
               <div class="footer-top__company">
                 <div class="footer-top__company-list">
                   <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
                     src="./assets/img/Assetss/woolworths.png"
                     alt="woolworths"
                   />
-                  <img src="./assets/img/Assetss/target.png" alt="target" />
-                  <img src="./assets/img/Assetss/bigw.png" alt="" />
+                  <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    src="./assets/img/Assetss/target.png"
+                    alt="target"
+                  />
+                  <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    src="./assets/img/Assetss/bigw.png"
+                    alt=""
+                  />
 
-                  <img src="./assets/img/Assetss/coles.png" alt="coles" />
-                  <img src="./assets/img/Assetss/mrtoys.png" alt="mrtoys" />
-                  <img src="./assets/img/Assetss/toymate.png" alt="toymate" />
+                  <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    src="./assets/img/Assetss/coles.png"
+                    alt="coles"
+                  />
+                  <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    src="./assets/img/Assetss/mrtoys.png"
+                    alt="mrtoys"
+                  />
+                  <img
+                    data-aos="fade-in"
+                    data-aos-duration="500"
+                    src="./assets/img/Assetss/toymate.png"
+                    alt="toymate"
+                  />
                 </div>
               </div>
             </div>
             <div class="footer-bottom d-flex flex-column align-items-center">
-              <div class="footer-bottom__logo">
+              <div
+                class="footer-bottom__logo"
+                data-aos="fade-in"
+                data-aos-duration="500"
+              >
                 <img src="./assets/img/Assetss/S1_Logo.png" alt="logo" />
               </div>
-              <p class="text-white text-center">
+              <p
+                class="text-white text-center"
+                data-aos="fade-in"
+                data-aos-duration="500"
+              >
                 Powered by TotallyAwesome and The Brand Exchange
               </p>
               <div class="footer-bottom__company">
@@ -1133,6 +1347,12 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- JS FILE -->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/slider.js"></script>

@@ -133,17 +133,22 @@
       gap: 1%;
       margin: 1.5% 0 2.5%;
 
+      @include res-xs {
+        margin: 5% auto 5%;
+      }
+
       &-icon {
         height: auto;
         animation: btn 1s linear infinite;
         @include res-xs {
-          width: 10%;
+          width: 5%;
         }
       }
 
       &-text {
         @include res-xs {
-          width: 90%;
+          width: 85%;
+          flex: 1;
         }
       }
     }
@@ -259,7 +264,7 @@
           height: auto;
 
           @include res-xs {
-            width: 100%;
+            width: 90%;
           }
         }
       }

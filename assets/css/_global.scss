@@ -40,6 +40,11 @@ img {
 }
 .btn-disable {
   filter: brightness(50%);
+  transition: all 0.2s linear;
+
+  &:hover {
+    filter: brightness(100%);
+  }
 }
 
 // Line section

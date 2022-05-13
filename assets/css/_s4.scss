@@ -2,17 +2,27 @@
   background: url('../img/Assetss/BG2.jpg') no-repeat center;
   background-size: cover;
   padding: 3.4% 0;
+
+  @include res-sm {
+    padding: 10% 0;
+  }
+  @include res-xs {
+    padding: 10% 0;
+  }
   &__colection {
+    margin-bottom: 1%;
     @include res-xs {
       width: 90%;
+      margin-bottom: 3%;
     }
     @include res-sm {
       width: 90%;
+      margin-bottom: 3%;
     }
   }
   &__btn {
     margin-top: 2%;
-    animation: flicker 1s infinite;
+    animation: zoom 1.5s infinite;
 
     @include res-xs {
       width: 80%;

@@ -1,26 +1,25 @@
 .s5 {
   position: relative;
-  padding-block: 3%;
-  overflow-y: hidden;
-  height: 90vh;
-  background: url('../img/Assetss/section-play-game-banner.png');
+  height: max-content;
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
-
-  @include res-xs {
-    height: 70vh;
-    background-size: auto 100%;
+  &__banner {
+    width: 100%;
   }
-  @include res-sm {
-    height: 75vh;
-  }
-
   &__headline {
+    position: absolute;
+    top: 6%;
     width: 100%;
     text-align: center;
+
+    @include res-sm {
+      top: 10%;
+    }
+    @include res-xs {
+      top: 10%;
+    }
+
     & img {
+      width: 49%;
       @include res-sm {
         width: 80%;
       }
@@ -31,10 +30,20 @@
   }
 
   &__play {
-    @include absolute('horizontal');
+    position: absolute;
+    text-align: center;
     bottom: 5px;
+    width: 100%;
     & img {
+      width: 33%;
       animation: zoom 1.5s infinite;
+
+      @include res-sm {
+        width: 80%;
+      }
+      @include res-xs {
+        width: 80%;
+      }
     }
   }
 }

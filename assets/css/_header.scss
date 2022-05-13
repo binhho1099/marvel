@@ -3,12 +3,17 @@
     display: flex;
     height: 10vh;
     background: url('../img/Assetss/ta_logo_bg.png');
+
+    @include res-xs {
+      height: 8vh;
+    }
     & a {
       display: block;
       margin: auto;
       height: 100%;
     }
     & img {
+      width: 100%;
       height: 100%;
     }
   }

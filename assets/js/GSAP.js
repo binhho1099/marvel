@@ -8,8 +8,8 @@ gsap.to(['.s1-top__banner-car1', '.s1-top__banner-car2'], {
     scrub: true,
     // markers: true,
   },
-  x: '-10%',
-  y: '10%',
+  x: '-18%',
+  y: '18%',
   ease: 'none',
   duration: 3,
 });

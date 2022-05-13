@@ -31,10 +31,12 @@
         flex-wrap: wrap;
         grid-gap: 25px;
         @include res-xs {
+          grid-gap: 10px;
           max-width: 100%;
         }
         @include res-sm {
           max-width: 100%;
+          grid-gap: 15px;
         }
         @include res-md {
           max-width: 100%;

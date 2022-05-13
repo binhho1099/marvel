@@ -130,6 +130,10 @@ img {
 
 .btn-disable {
   filter: brightness(50%);
+  transition: all 0.2s linear;
+}
+.btn-disable:hover {
+  filter: brightness(100%);
 }
 
 .section-line {
@@ -249,12 +253,18 @@ img {
   height: 10vh;
   background: url("../img/Assetss/ta_logo_bg.png");
 }
+@media (max-width: 576px) {
+  .header__bg {
+    height: 8vh;
+  }
+}
 .header__bg a {
   display: block;
   margin: auto;
   height: 100%;
 }
 .header__bg img {
+  width: 100%;
   height: 100%;
 }
 
@@ -267,22 +277,37 @@ img {
 }
 @media (max-width: 576px) {
   .s1-top {
-    height: 80vh;
+    height: 85vh;
+  }
+}
+@media (max-width: 420px) {
+  .s1-top {
+    height: 60vh;
   }
 }
 .s1-top__logo {
   position: absolute;
   top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media (max-width: 576px) {
-  .s1-top__logo {
-    top: 2rem;
-  }
+  text-align: center;
+  width: 100%;
 }
 .s1-top__logo > img {
-  width: 93%;
+  width: 11.3%;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .s1-top__logo > img {
+    width: 15%;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .s1-top__logo > img {
+    width: 15%;
+  }
+}
+@media (max-width: 576px) {
+  .s1-top__logo > img {
+    width: 25%;
+  }
 }
 .s1-top__banner {
   width: 100%;
@@ -305,7 +330,7 @@ img {
 }
 .s1-top__banner-car1 {
   position: absolute;
-  bottom: 22%;
+  bottom: 20%;
   left: 14%;
   aspect-ratio: 16/9;
   filter: drop-shadow(-10px 25px 40px #000);
@@ -320,9 +345,20 @@ img {
     width: 75%;
   }
 }
+@media (min-width: 577px) and (max-width: 768px) {
+  .s1-top__banner-car1 {
+    width: 70%;
+    left: 25%;
+    bottom: 15%;
+  }
+}
+@media (max-width: 576px) {
+  .s1-top__banner-car1 {
+    bottom: 13%;
+  }
+}
 .s1-top__banner-car1 img {
   width: 100%;
-  animation: showCar 1s linear, car 0.3s 1s infinite;
 }
 .s1-top__banner-car1::before {
   content: "";
@@ -343,7 +379,6 @@ img {
 }
 .s1-top__banner-car2 img {
   width: 100%;
-  animation: showCar 1s linear, car 0.3s 1s infinite;
 }
 @media (max-width: 576px) {
   .s1-top__banner-car2 {
@@ -406,9 +441,19 @@ img {
   background: url("../img/Assetss/BG1.jpg") bottom;
   height: auto;
 }
+@media (max-width: 576px) {
+  .s1-bottom {
+    padding-block: 10%;
+  }
+}
 .s1-bottom__headline {
   text-align: center;
   margin-bottom: 4%;
+}
+@media (max-width: 576px) {
+  .s1-bottom__headline {
+    margin-bottom: 10%;
+  }
 }
 @media (max-width: 576px) {
   .s1-bottom__headline > img {
@@ -439,13 +484,17 @@ img {
   background-position: center;
   position: relative;
 }
-.s1-bottom__video-icon-replay, .s2__video-icon-replay {
+.s1-bottom__video-icon-replay, .s2__video-icon-play, .s2__video-icon-replay, .s1-bottom__video-icon-play {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 10;
+  width: 15%;
+}
+.s1-bottom__video-icon-replay img, .s2__video-icon-play img, .s2__video-icon-replay img, .s1-bottom__video-icon-play img {
+  width: 100%;
 }
 @media (max-width: 576px) {
   .s1-bottom__video, .s2__video {
@@ -465,12 +514,27 @@ img {
   background: url("../img/Assetss/BG2.jpg");
   padding-block: 4.5%;
 }
+@media (max-width: 576px) {
+  .s2 {
+    padding-block: 10%;
+  }
+}
 .s2__headline {
   text-align: center;
+}
+@media (max-width: 576px) {
+  .s2__headline > img {
+    width: 90%;
+  }
 }
 .s2__video {
   background-image: url("../img/Assetss/S2_Videoframe.png");
   margin: 4% auto 2%;
+}
+@media (max-width: 576px) {
+  .s2__video {
+    margin: 10% auto 8%;
+  }
 }
 .s2__video video {
   aspect-ratio: 16/9;
@@ -680,18 +744,24 @@ img {
   gap: 1%;
   margin: 1.5% 0 2.5%;
 }
+@media (max-width: 576px) {
+  .s3-bottom__btn {
+    margin: 5% auto 5%;
+  }
+}
 .s3-bottom__btn-icon {
   height: auto;
   animation: btn 1s linear infinite;
 }
 @media (max-width: 576px) {
   .s3-bottom__btn-icon {
-    width: 10%;
+    width: 5%;
   }
 }
 @media (max-width: 576px) {
   .s3-bottom__btn-text {
-    width: 90%;
+    width: 85%;
+    flex: 1;
   }
 }
 .s3-bottom__wave {
@@ -815,7 +885,7 @@ img {
 }
 @media (max-width: 576px) {
   .s3-bottom__product-title img {
-    width: 100%;
+    width: 90%;
   }
 }
 .s3__racing-original, .s3__racing-venomized, .s3__mini-original, .s3__mini-venomized {
@@ -827,19 +897,34 @@ img {
   background-size: cover;
   padding: 3.4% 0;
 }
+@media (min-width: 577px) and (max-width: 768px) {
+  .s4 {
+    padding: 10% 0;
+  }
+}
+@media (max-width: 576px) {
+  .s4 {
+    padding: 10% 0;
+  }
+}
+.s4__colection {
+  margin-bottom: 1%;
+}
 @media (max-width: 576px) {
   .s4__colection {
     width: 90%;
+    margin-bottom: 3%;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .s4__colection {
     width: 90%;
+    margin-bottom: 3%;
   }
 }
 .s4__btn {
   margin-top: 2%;
-  animation: flicker 1s infinite;
+  animation: zoom 1.5s infinite;
 }
 @media (max-width: 576px) {
   .s4__btn {
@@ -849,28 +934,29 @@ img {
 
 .s5 {
   position: relative;
-  padding-block: 3%;
-  overflow-y: hidden;
-  height: 90vh;
-  background: url("../img/Assetss/section-play-game-banner.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  height: max-content;
 }
-@media (max-width: 576px) {
-  .s5 {
-    height: 70vh;
-    background-size: auto 100%;
-  }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-  .s5 {
-    height: 75vh;
-  }
+.s5__banner {
+  width: 100%;
 }
 .s5__headline {
+  position: absolute;
+  top: 6%;
   width: 100%;
   text-align: center;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .s5__headline {
+    top: 10%;
+  }
+}
+@media (max-width: 576px) {
+  .s5__headline {
+    top: 10%;
+  }
+}
+.s5__headline img {
+  width: 49%;
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .s5__headline img {
@@ -884,12 +970,23 @@ img {
 }
 .s5__play {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
   bottom: 5px;
+  width: 100%;
 }
 .s5__play img {
+  width: 33%;
   animation: zoom 1.5s infinite;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .s5__play img {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .s5__play img {
+    width: 80%;
+  }
 }
 
 .footer {
@@ -926,12 +1023,14 @@ img {
 }
 @media (max-width: 576px) {
   .footer-top__company-list {
+    grid-gap: 10px;
     max-width: 100%;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .footer-top__company-list {
     max-width: 100%;
+    grid-gap: 15px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {

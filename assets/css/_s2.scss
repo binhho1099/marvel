@@ -2,8 +2,18 @@
   background: url('../img/Assetss/BG2.jpg');
   padding-block: 4.5%;
 
+  @include res-xs {
+    padding-block: 10%;
+  }
+
   &__headline {
     text-align: center;
+
+    & > img {
+      @include res-xs {
+        width: 90%;
+      }
+    }
   }
 
   &__video {
@@ -11,11 +21,18 @@
     background-image: url('../img/Assetss/S2_Videoframe.png');
     margin: 4% auto 2%;
 
+    @include res-xs {
+      margin: 10% auto 8%;
+    }
+
     & video {
       aspect-ratio: 16/9;
     }
 
     &-icon-replay {
+      @extend .s1-bottom__video-icon-replay;
+    }
+    &-icon-play {
       @extend .s1-bottom__video-icon-replay;
     }
   }
