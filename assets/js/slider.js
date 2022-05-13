@@ -43,21 +43,17 @@ function chanceVideo(id) {
 }
 $(document).ready(function () {
   // carousel modal
-  $('.owl-modal').owlCarousel({
-    loop: true,
-    items: 1,
-    margin: 10,
-    dots: false,
-    nav: true,
-    itemsDesktop: false,
-    itemsDesktopSmall: false,
-    itemsTablet: false,
-    itemsMobile: false,
-    navText: [
-      '<img src="./assets/img/Assetss/arrow_left.png" alt="arrow_left">',
-      '<img src="./assets/img/Assetss/arrow_right.png" alt="arrow_right">',
-    ],
-  });
+  // $('.owl-modal').owlCarousel({
+  //   loop: true,
+  //   items: 1,
+  //   margin: 10,
+  //   dots: false,
+  //   nav: true,
+  //   navText: [
+  //     '<img src="./assets/img/Assetss/arrow_left.png" alt="arrow_left">',
+  //     '<img src="./assets/img/Assetss/arrow_right.png" alt="arrow_right">',
+  //   ],
+  // });
   // corousel video s2
   $('.owl-video').owlCarousel({
     loop: true,
@@ -87,26 +83,43 @@ $(document).ready(function () {
     chanceVideo(id);
   });
 
+  var itemModalName;
+  var index;
+
   // Modal list popup
   const products = document.querySelectorAll('.s3-bottom__product');
   products.forEach(product =>
     product.addEventListener('click', function (e) {
-      const itemModalName = e.target.dataset.modalName;
-      const index = e.target.dataset.indexModal;
-      const modals = document.querySelectorAll('.owl-modal');
-
-      $('#myModal').on('shown.bs.modal', function () {
-        modals.forEach(modal =>
-          modal.dataset.modalName !== itemModalName
-            ? modal.classList.add('hiden')
-            : modal.classList.remove('hiden')
-        );
-        $(`#owl-modal-${itemModalName}`).trigger('to.owl.carousel', [index, 1]);
-      });
+      itemModalName = e.target.dataset.modalName;
+      index = e.target.dataset.indexModal;
 
       $('#myModal').modal('show');
     })
   );
+  const modals = document.querySelectorAll('.owl-modal');
+  $('#myModal').on('shown.bs.modal', function () {
+    modals.forEach(modal => {
+      return modal.dataset.modalName === itemModalName
+        ? modal.classList.remove('hiden')
+        : modal.classList.add('hiden');
+    });
+    $('.owl-modal').owlCarousel({
+      loop: true,
+      items: 1,
+      margin: 10,
+      dots: false,
+      nav: true,
+      singleItem: true,
+      navText: [
+        '<img src="./assets/img/Assetss/arrow_left.png" alt="arrow_left">',
+        '<img src="./assets/img/Assetss/arrow_right.png" alt="arrow_right">',
+      ],
+    });
+    $('.owl-modal').trigger('to.owl.carousel', [index, 0]);
+  });
+  $('#myModal').on('hide.bs.modal', function () {
+    $(`#owl-modal-${itemModalName}`).owlCarousel('destroy');
+  });
 });
 
 const modalBtn = document.querySelector('.modal-btn-close');

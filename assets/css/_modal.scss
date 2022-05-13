@@ -1,4 +1,7 @@
 .modal {
+  &-open {
+    padding-right: 0 !important;
+  }
   &-dialog {
     justify-content: center;
   }
@@ -11,13 +14,13 @@
     margin: 0 auto;
 
     @include res-md {
-      width: 60vw;
+      width: 70vw !important;
     }
     @include res-sm {
-      width: 70vw;
+      width: 70vw !important;
     }
     @include res-xs {
-      width: 80vw;
+      width: 80vw !important;
     }
   }
 
@@ -30,15 +33,34 @@
     text-align: center;
     cursor: pointer;
     & img {
-      width: 100%;
+      width: 80%;
       filter: drop-shadow(0 0 10px #fff);
 
       @include res-xs {
         width: 50%;
       }
-      @include res-sm {
-        width: 80%;
-      }
     }
   }
+}
+
+.owl-modal .owl-item {
+  width: 50vw !important;
+
+  @include res-md {
+    width: 70vw !important;
+  }
+  @include res-sm {
+    width: 70vw !important;
+  }
+  @include res-xs {
+    width: 80vw !important;
+  }
+}
+.owl-modal .owl-item .item {
+  width: 100% !important;
+}
+
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: auto;
 }

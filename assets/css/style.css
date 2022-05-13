@@ -963,6 +963,9 @@ img {
   }
 }
 
+.modal-open {
+  padding-right: 0 !important;
+}
 .modal-dialog {
   justify-content: center;
 }
@@ -976,17 +979,17 @@ img {
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .modal-content {
-    width: 60vw;
+    width: 70vw !important;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .modal-content {
-    width: 70vw;
+    width: 70vw !important;
   }
 }
 @media (max-width: 576px) {
   .modal-content {
-    width: 80vw;
+    width: 80vw !important;
   }
 }
 .modal-btn-close {
@@ -998,7 +1001,7 @@ img {
   cursor: pointer;
 }
 .modal-btn-close img {
-  width: 100%;
+  width: 80%;
   filter: drop-shadow(0 0 10px #fff);
 }
 @media (max-width: 576px) {
@@ -1006,10 +1009,33 @@ img {
     width: 50%;
   }
 }
-@media (min-width: 577px) and (max-width: 768px) {
-  .modal-btn-close img {
-    width: 80%;
+
+.owl-modal .owl-item {
+  width: 50vw !important;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .owl-modal .owl-item {
+    width: 70vw !important;
   }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .owl-modal .owl-item {
+    width: 70vw !important;
+  }
+}
+@media (max-width: 576px) {
+  .owl-modal .owl-item {
+    width: 80vw !important;
+  }
+}
+
+.owl-modal .owl-item .item {
+  width: 100% !important;
+}
+
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
