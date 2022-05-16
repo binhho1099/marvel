@@ -8,22 +8,38 @@
     position: relative;
 
     @include res-xs {
-      height: 50vh;
+      height: 500px;
+    }
+    @include res-xxs {
+      height: 400px;
+    }
+    @include res-2xs {
+      height: 300px;
+    }
+    @include res-3xs {
+      height: 250px;
     }
 
-    @include res-tablet-portrait {
-      height: 70vh;
+    @include res-sm {
+      height: 700px;
     }
 
-    // @include res-smartphone-landscape-special {
-    //   height: 100vh;
-    // }
-    // @include res-xxs {
-    //   height: 70vh;
-    // }
-    // @include res-xxxs {
-    //   height: 60vh;
-    // }
+    @include res-md {
+      height: 800px;
+    }
+
+    @include res-sm-landscape {
+      height: 400px;
+    }
+
+    @include res-md-landscape {
+      height: 400px;
+    }
+
+    @include res-lg-portrait {
+      height: 800px;
+    }
+
     // LOGO
     &__logo {
       position: absolute;
@@ -52,41 +68,38 @@
       position: absolute;
       bottom: 0;
 
-      // @include res-xs {
-      //   height: 100vh;
-      // }
-
       &-shape {
         width: 100%;
         filter: drop-shadow(0 0 10px #000);
 
+        @include res-xs {
+          height: 300px;
+        }
+        @include res-xxs {
+          height: 250px;
+        }
+        @include res-2xs {
+          height: 190px;
+        }
+        @include res-3xs {
+          height: 150px;
+        }
+
+        @include res-sm {
+          height: 400px;
+        }
+
         @include res-md {
-          height: 50vh;
+          height: 450px;
         }
 
-        @include res-smartphone-portrait {
-          height: 30vh;
-        }
-        @include res-smartphone-landscape {
-          height: 50vh;
+        @include res-sm-landscape {
+          height: 250px;
         }
 
-        @include res-tablet-portrait {
-          height: 40vh;
+        @include res-md-landscape {
+          height: 250px;
         }
-
-        @include res-smartphone-landscape-special {
-          visibility: hidden;
-        }
-        // @include res-sm {
-        //   height: 50vh;
-        // }
-        // @include res-xs {
-        //   height: 30vh;
-        // }
-        // @include res-xxxs {
-        //   height: 30vh;
-        // }
       }
 
       &-car1 {
@@ -96,64 +109,44 @@
         aspect-ratio: 16/9;
         filter: drop-shadow(-10px 25px 40px #000);
 
-        // @include res-lg {
-        //   width: 50%;
-        // }
-        // @include res-md {
-        //   bottom: 25%;
-        //   width: 50%;
-        // }
-        // @include res-sm {
-        //   width: 55%;
-        //   bottom: 22%;
-        // }
-
-        // @include res-xs {
-        //   width: 50%;
-        //   top: 30%;
-        //   left: 18%;
-        // }
-
-        // @include res-xxxs {
-        //   width: 50%;
-        //   top: 33%;
-        //   left: 18%;
-        // }
-        @include res-smartphone-landscape {
-          width: 40%;
-          top: 0%;
-          left: 22%;
-        }
-        @include res-smartphone-portrait {
-          width: 60%;
-          top: 22%;
-          left: 10%;
-        }
-
-        @include res-tablet-landscape {
-          width: 50%;
-        }
-
-        @include res-tablet-portrait {
-          width: 50%;
-          top: 30%;
-          left: 20%;
-        }
-
-        @include res-tablet-landscape-special {
+        @include res-xs {
           width: 50%;
           left: 15%;
-          top: 0%;
+          top: 23%;
         }
 
-        @include res-smartphone-landscape-special {
-          width: 30%;
-          top: 10%;
-          left: 35%;
+        @include res-sm {
+          width: 55%;
+          left: 15%;
+          top: 25%;
+        }
+        @include res-md {
+          width: 55%;
+          left: 15%;
+          top: 20%;
         }
 
-        @include res-galaxy-fold {
+        @include res-lg {
           width: 50%;
+          left: 20%;
+          top: 5%;
+        }
+        @include res-xl {
+          width: 44%;
+          left: 20%;
+          top: 15%;
+        }
+
+        @include res-sm-landscape {
+          width: 45%;
+          left: 20%;
+          top: 5%;
+        }
+
+        @include res-md-landscape {
+          width: 40%;
+          left: 20%;
+          top: 10%;
         }
 
         & img {
@@ -180,73 +173,44 @@
         position: absolute;
         bottom: 69%;
         right: 6%;
-
         filter: drop-shadow(-10px 25px 20px #000);
+
+        @include res-xs {
+          width: 30%;
+        }
+
+        @include res-sm {
+          width: 35%;
+          right: 3%;
+        }
+
+        @include res-md {
+          width: 30%;
+          right: 3%;
+        }
+        @include res-lg {
+          width: 28%;
+          right: 3%;
+          bottom: 73%;
+        }
+        @include res-xl {
+          width: 25%;
+          right: 3%;
+          bottom: 67%;
+        }
+        @include res-sm-landscape {
+          width: 25%;
+          right: 3%;
+          bottom: 75%;
+        }
+        // @include res-md-landscape {
+        //   bottom: 75%;
+        // }
 
         & img {
           width: 100%;
           animation: showCar 1s linear;
         }
-
-        @include res-smartphone-portrait {
-          width: 35%;
-          right: 0%;
-          bottom: 70%;
-        }
-        @include res-smartphone-landscape {
-          width: 27%;
-          right: 1%;
-          bottom: 75%;
-        }
-
-        @include res-tablet-portrait {
-          right: 0%;
-          bottom: 70%;
-        }
-
-        @include res-tablet-landscape {
-          width: 30%;
-          right: 2%;
-          bottom: 73%;
-        }
-
-        @include res-tablet-portrait {
-          width: 35%;
-          right: 0%;
-        }
-
-        // @include res-xs {
-        //   width: 30%;
-        // }
-
-        @include res-tablet-landscape-special {
-          width: 30%;
-          right: 3%;
-          bottom: 75%;
-        }
-
-        @include res-smartphone-landscape-special {
-          width: 20%;
-          right: 5%;
-          bottom: 70%;
-        }
-
-        @include res-galaxy-fold {
-          width: 35%;
-          right: 1%;
-        }
-
-        // @include res-sm {
-        //   width: 30%;
-        //   bottom: 73%;
-        //   right: 0%;
-        // }
-        // @include res-md {
-        //   width: 30%;
-        // }
-        // @include res-lg {
-        //   width: 30%;
-        // }
 
         &::before {
           content: '';
