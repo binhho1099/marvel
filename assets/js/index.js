@@ -115,7 +115,7 @@ const bgMobile = './assets/img/Assetss/play-game-banner-mobile.png';
 const s5Banner = document.querySelector('.s5__banner');
 window.addEventListener('resize', function () {
   let windowWidth = window.innerWidth;
-  if (windowWidth < 765) {
+  if (windowWidth < 770) {
     s5Banner.setAttribute('src', bgMobile);
   } else {
     s5Banner.setAttribute('src', bgDestop);
@@ -127,19 +127,23 @@ const car1 = document.getElementById('car1');
 const car2 = document.getElementById('car2');
 let scrolling = false;
 
-window.scroll = () => {
+window.addEventListener('scroll', function () {
   scrolling = true;
-  car1.style.animation = null;
-  car2.style.animation = null;
-};
+  console.log('scroll');
+  car1.style.animation = 'none';
+  car2.style.animation = 'none';
+});
 
-setInterval(() => {
-  if (scrolling) {
-    scrolling = false;
-  }
-}, 100);
-
-if (!scrolling) {
-  car1.style.animation = 'showCar 1s linear,car 0.3s 2s infinite';
-  car2.style.animation = 'showCar 1s linear,car 0.3s 2s infinite';
-}
+setTimeout(() => {
+  car1.style.animation = 'car 0.3s infinite';
+  car2.style.animation = 'car 0.3s infinite';
+  setInterval(() => {
+    if (scrolling) {
+      scrolling = false;
+    }
+    if (!scrolling) {
+      car1.style.animation = 'car 0.3s infinite';
+      car2.style.animation = 'car 0.3s infinite';
+    }
+  }, 500);
+}, 1000);

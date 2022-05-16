@@ -6,13 +6,24 @@
     background-position: 0 0;
     background-size: cover;
     position: relative;
+
     @include res-xs {
-      height: 85vh;
-    }
-    @include res-xxs {
-      height: 60vh;
+      height: 50vh;
     }
 
+    @include res-tablet-portrait {
+      height: 70vh;
+    }
+
+    // @include res-smartphone-landscape-special {
+    //   height: 100vh;
+    // }
+    // @include res-xxs {
+    //   height: 70vh;
+    // }
+    // @include res-xxxs {
+    //   height: 60vh;
+    // }
     // LOGO
     &__logo {
       position: absolute;
@@ -49,13 +60,33 @@
         width: 100%;
         filter: drop-shadow(0 0 10px #000);
 
-        @include res-sm {
-          width: 180%;
+        @include res-md {
+          height: 50vh;
         }
-        @include res-xs {
-          width: 200%;
-          // display: none;
+
+        @include res-smartphone-portrait {
+          height: 30vh;
         }
+        @include res-smartphone-landscape {
+          height: 50vh;
+        }
+
+        @include res-tablet-portrait {
+          height: 40vh;
+        }
+
+        @include res-smartphone-landscape-special {
+          visibility: hidden;
+        }
+        // @include res-sm {
+        //   height: 50vh;
+        // }
+        // @include res-xs {
+        //   height: 30vh;
+        // }
+        // @include res-xxxs {
+        //   height: 30vh;
+        // }
       }
 
       &-car1 {
@@ -63,27 +94,71 @@
         bottom: 20%;
         left: 14%;
         aspect-ratio: 16/9;
+        filter: drop-shadow(-10px 25px 40px #000);
 
-        @include res-lg {
+        // @include res-lg {
+        //   width: 50%;
+        // }
+        // @include res-md {
+        //   bottom: 25%;
+        //   width: 50%;
+        // }
+        // @include res-sm {
+        //   width: 55%;
+        //   bottom: 22%;
+        // }
+
+        // @include res-xs {
+        //   width: 50%;
+        //   top: 30%;
+        //   left: 18%;
+        // }
+
+        // @include res-xxxs {
+        //   width: 50%;
+        //   top: 33%;
+        //   left: 18%;
+        // }
+        @include res-smartphone-landscape {
+          width: 40%;
+          top: 0%;
+          left: 22%;
+        }
+        @include res-smartphone-portrait {
+          width: 60%;
+          top: 22%;
+          left: 10%;
+        }
+
+        @include res-tablet-landscape {
           width: 50%;
         }
-        @include res-md {
-          width: 75%;
-        }
-        @include res-sm {
-          width: 70%;
-          left: 25%;
-          bottom: 15%;
+
+        @include res-tablet-portrait {
+          width: 50%;
+          top: 30%;
+          left: 20%;
         }
 
-        @include res-xs {
-          bottom: 13%;
+        @include res-tablet-landscape-special {
+          width: 50%;
+          left: 15%;
+          top: 0%;
         }
-        filter: drop-shadow(-10px 25px 40px #000);
+
+        @include res-smartphone-landscape-special {
+          width: 30%;
+          top: 10%;
+          left: 35%;
+        }
+
+        @include res-galaxy-fold {
+          width: 50%;
+        }
 
         & img {
           width: 100%;
-          // animation: showCar 1s linear;
+          animation: showCar 1s linear;
         }
 
         &::before {
@@ -98,6 +173,7 @@
           background-size: contain;
 
           opacity: 0.8;
+          z-index: -1;
         }
       }
       &-car2 {
@@ -109,21 +185,68 @@
 
         & img {
           width: 100%;
-          // animation: showCar 1s linear, car 0.3s 1s infinite;
+          animation: showCar 1s linear;
         }
 
-        @include res-xs {
-          display: none;
+        @include res-smartphone-portrait {
+          width: 35%;
+          right: 0%;
+          bottom: 70%;
         }
-        @include res-sm {
-          display: none;
+        @include res-smartphone-landscape {
+          width: 27%;
+          right: 1%;
+          bottom: 75%;
         }
-        @include res-md {
-          display: none;
+
+        @include res-tablet-portrait {
+          right: 0%;
+          bottom: 70%;
         }
-        @include res-lg {
+
+        @include res-tablet-landscape {
           width: 30%;
+          right: 2%;
+          bottom: 73%;
         }
+
+        @include res-tablet-portrait {
+          width: 35%;
+          right: 0%;
+        }
+
+        // @include res-xs {
+        //   width: 30%;
+        // }
+
+        @include res-tablet-landscape-special {
+          width: 30%;
+          right: 3%;
+          bottom: 75%;
+        }
+
+        @include res-smartphone-landscape-special {
+          width: 20%;
+          right: 5%;
+          bottom: 70%;
+        }
+
+        @include res-galaxy-fold {
+          width: 35%;
+          right: 1%;
+        }
+
+        // @include res-sm {
+        //   width: 30%;
+        //   bottom: 73%;
+        //   right: 0%;
+        // }
+        // @include res-md {
+        //   width: 30%;
+        // }
+        // @include res-lg {
+        //   width: 30%;
+        // }
 
         &::before {
           content: '';
@@ -137,6 +260,7 @@
           background-size: contain;
 
           opacity: 0.8;
+          z-index: -1;
         }
       }
     }
@@ -152,13 +276,17 @@
       bottom: 4%;
 
       @include res-xs {
-        width: 100%;
+        grid-gap: 5px;
+        width: 50%;
         justify-content: center;
       }
 
       & img:first-child,
       & img:last-child {
         @include animationBtnScroll(1s);
+        @include res-xs {
+          width: 5%;
+        }
       }
       &-child {
         @include res-xs {
