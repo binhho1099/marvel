@@ -8,24 +8,24 @@
     position: relative;
 
     @include res-xs {
-      height: 500px;
-    }
-    @include res-xxs {
       height: 400px;
     }
+    @include res-xxs {
+      height: 340px;
+    }
     @include res-2xs {
-      height: 300px;
+      height: 230px;
     }
     @include res-3xs {
-      height: 250px;
+      height: 230px;
     }
 
     @include res-sm {
-      height: 700px;
+      height: 450px;
     }
 
     @include res-md {
-      height: 800px;
+      height: 550px;
     }
 
     @include res-sm-landscape {
@@ -33,11 +33,11 @@
     }
 
     @include res-md-landscape {
-      height: 400px;
+      height: 500px;
     }
 
     @include res-lg-portrait {
-      height: 800px;
+      height: 650px;
     }
 
     // LOGO
@@ -57,7 +57,7 @@
           width: 15%;
         }
         @include res-xs {
-          width: 25%;
+          width: 15%;
         }
       }
     }
@@ -73,24 +73,24 @@
         filter: drop-shadow(0 0 10px #000);
 
         @include res-xs {
-          height: 300px;
-        }
-        @include res-xxs {
           height: 250px;
         }
+        @include res-xxs {
+          height: 230px;
+        }
         @include res-2xs {
-          height: 190px;
+          height: 150px;
         }
         @include res-3xs {
           height: 150px;
         }
 
         @include res-sm {
-          height: 400px;
+          height: 270px;
         }
 
         @include res-md {
-          height: 450px;
+          height: 350px;
         }
 
         @include res-sm-landscape {
@@ -98,7 +98,17 @@
         }
 
         @include res-md-landscape {
-          height: 250px;
+          height: 330px;
+        }
+
+        @include res-lg {
+          height: 50vh;
+        }
+        @include res-lg-portrait {
+          height: 400px;
+        }
+        @include res-xl {
+          height: 53vh;
         }
       }
 
@@ -108,20 +118,30 @@
         left: 14%;
         aspect-ratio: 16/9;
         filter: drop-shadow(-10px 25px 40px #000);
-
         @include res-xs {
+          width: 55%;
+          left: 15%;
+          top: 10%;
+        }
+
+        @include res-xxs {
+          width: 55%;
+          left: 15%;
+          top: 15%;
+        }
+        @include res-2xs {
           width: 50%;
           left: 15%;
-          top: 23%;
+          top: 13%;
         }
 
         @include res-sm {
           width: 55%;
           left: 15%;
-          top: 25%;
+          top: 5%;
         }
         @include res-md {
-          width: 55%;
+          width: 60%;
           left: 15%;
           top: 20%;
         }
@@ -143,10 +163,27 @@
           top: 5%;
         }
 
+        @include res-md {
+          width: 55%;
+          left: 15%;
+          top: 15%;
+        }
+
         @include res-md-landscape {
-          width: 40%;
-          left: 20%;
-          top: 10%;
+          width: 55%;
+          left: 15%;
+          top: 12%;
+        }
+
+        @include res-lg {
+          width: 53%;
+          top: 3%;
+          left: 15%;
+        }
+        @include res-xl {
+          width: 53%;
+          top: 5%;
+          left: 15%;
         }
 
         & img {
@@ -174,19 +211,24 @@
         bottom: 69%;
         right: 6%;
         filter: drop-shadow(-10px 25px 20px #000);
-
         @include res-xs {
           width: 30%;
+          right: 1%;
+        }
+        @include res-xxs {
+          width: 30%;
+          right: 3%;
         }
 
         @include res-sm {
-          width: 35%;
-          right: 3%;
+          width: 30%;
+          right: 1%;
+          bottom: 75%;
         }
 
         @include res-md {
-          width: 30%;
-          right: 3%;
+          width: 25%;
+          right: 0%;
         }
         @include res-lg {
           width: 28%;
@@ -203,9 +245,23 @@
           right: 3%;
           bottom: 75%;
         }
-        // @include res-md-landscape {
-        //   bottom: 75%;
-        // }
+        @include res-md-landscape {
+          bottom: 75%;
+        }
+
+        @include res-md {
+          width: 30%;
+          bottom: 70%;
+        }
+
+        @include res-lg {
+          width: 28%;
+          bottom: 75%;
+        }
+        @include res-xl {
+          width: 28%;
+          bottom: 70%;
+        }
 
         & img {
           width: 100%;

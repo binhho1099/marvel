@@ -258,8 +258,13 @@ img {
     height: 5vh;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .header__bg {
+    height: 5vh;
+  }
+}
 .header__bg a {
-  display: block;
+  display: flex;
   margin: auto;
   height: 100%;
 }
@@ -277,32 +282,32 @@ img {
 }
 @media (max-width: 576px) {
   .s1-top {
-    height: 500px;
+    height: 400px;
   }
 }
 @media (max-width: 500px) {
   .s1-top {
-    height: 400px;
+    height: 340px;
   }
 }
 @media (max-width: 400px) {
   .s1-top {
-    height: 300px;
+    height: 230px;
   }
 }
 @media (max-width: 300px) {
   .s1-top {
-    height: 250px;
+    height: 230px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .s1-top {
-    height: 700px;
+    height: 450px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .s1-top {
-    height: 800px;
+    height: 550px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {
@@ -312,12 +317,12 @@ img {
 }
 @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
   .s1-top {
-    height: 400px;
+    height: 500px;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) and (orientation: portrait) {
   .s1-top {
-    height: 800px;
+    height: 650px;
   }
 }
 .s1-top__logo {
@@ -341,7 +346,7 @@ img {
 }
 @media (max-width: 576px) {
   .s1-top__logo > img {
-    width: 25%;
+    width: 15%;
   }
 }
 .s1-top__banner {
@@ -355,17 +360,17 @@ img {
 }
 @media (max-width: 576px) {
   .s1-top__banner-shape {
-    height: 300px;
+    height: 250px;
   }
 }
 @media (max-width: 500px) {
   .s1-top__banner-shape {
-    height: 250px;
+    height: 230px;
   }
 }
 @media (max-width: 400px) {
   .s1-top__banner-shape {
-    height: 190px;
+    height: 150px;
   }
 }
 @media (max-width: 300px) {
@@ -375,12 +380,12 @@ img {
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .s1-top__banner-shape {
-    height: 400px;
+    height: 270px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .s1-top__banner-shape {
-    height: 450px;
+    height: 350px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {
@@ -390,7 +395,22 @@ img {
 }
 @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
   .s1-top__banner-shape {
-    height: 250px;
+    height: 330px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .s1-top__banner-shape {
+    height: 50vh;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) and (orientation: portrait) {
+  .s1-top__banner-shape {
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .s1-top__banner-shape {
+    height: 53vh;
   }
 }
 .s1-top__banner-car1 {
@@ -402,21 +422,35 @@ img {
 }
 @media (max-width: 576px) {
   .s1-top__banner-car1 {
+    width: 55%;
+    left: 15%;
+    top: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .s1-top__banner-car1 {
+    width: 55%;
+    left: 15%;
+    top: 15%;
+  }
+}
+@media (max-width: 400px) {
+  .s1-top__banner-car1 {
     width: 50%;
     left: 15%;
-    top: 23%;
+    top: 13%;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .s1-top__banner-car1 {
     width: 55%;
     left: 15%;
-    top: 25%;
+    top: 5%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .s1-top__banner-car1 {
-    width: 55%;
+    width: 60%;
     left: 15%;
     top: 20%;
   }
@@ -442,11 +476,32 @@ img {
     top: 5%;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .s1-top__banner-car1 {
+    width: 55%;
+    left: 15%;
+    top: 15%;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
   .s1-top__banner-car1 {
-    width: 40%;
-    left: 20%;
-    top: 10%;
+    width: 55%;
+    left: 15%;
+    top: 12%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .s1-top__banner-car1 {
+    width: 53%;
+    top: 3%;
+    left: 15%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .s1-top__banner-car1 {
+    width: 53%;
+    top: 5%;
+    left: 15%;
   }
 }
 .s1-top__banner-car1 img {
@@ -474,18 +529,26 @@ img {
 @media (max-width: 576px) {
   .s1-top__banner-car2 {
     width: 30%;
+    right: 1%;
+  }
+}
+@media (max-width: 500px) {
+  .s1-top__banner-car2 {
+    width: 30%;
+    right: 3%;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .s1-top__banner-car2 {
-    width: 35%;
-    right: 3%;
+    width: 30%;
+    right: 1%;
+    bottom: 75%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .s1-top__banner-car2 {
-    width: 30%;
-    right: 3%;
+    width: 25%;
+    right: 0%;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -507,6 +570,29 @@ img {
     width: 25%;
     right: 3%;
     bottom: 75%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+  .s1-top__banner-car2 {
+    bottom: 75%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .s1-top__banner-car2 {
+    width: 30%;
+    bottom: 70%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .s1-top__banner-car2 {
+    width: 28%;
+    bottom: 75%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .s1-top__banner-car2 {
+    width: 28%;
+    bottom: 70%;
   }
 }
 .s1-top__banner-car2 img {

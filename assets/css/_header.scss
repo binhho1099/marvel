@@ -7,8 +7,11 @@
     @include res-xs {
       height: 5vh;
     }
+    @include res-sm {
+      height: 5vh;
+    }
     & a {
-      display: block;
+      display: flex;
       margin: auto;
       height: 100%;
     }
