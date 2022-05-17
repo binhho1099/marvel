@@ -21,7 +21,7 @@
     }
 
     @include res-sm {
-      height: 450px;
+      height: 460px;
     }
 
     @include res-md {
@@ -29,7 +29,7 @@
     }
 
     @include res-sm-landscape {
-      height: 400px;
+      height: 430px;
     }
 
     @include res-md-landscape {
@@ -38,6 +38,10 @@
 
     @include res-lg-portrait {
       height: 650px;
+    }
+
+    @include res-xl-special {
+      height: 700px;
     }
 
     // LOGO
@@ -110,6 +114,10 @@
         @include res-xl {
           height: 53vh;
         }
+
+        @include res-xl-special {
+          height: 430px;
+        }
       }
 
       &-car1 {
@@ -121,7 +129,7 @@
         @include res-xs {
           width: 55%;
           left: 15%;
-          top: 10%;
+          top: 6%;
         }
 
         @include res-xxs {
@@ -132,13 +140,13 @@
         @include res-2xs {
           width: 50%;
           left: 15%;
-          top: 13%;
+          top: 10%;
         }
 
         @include res-sm {
           width: 55%;
-          left: 15%;
-          top: 5%;
+          left: 100px;
+          top: 0px;
         }
         @include res-md {
           width: 60%;
@@ -146,11 +154,6 @@
           top: 20%;
         }
 
-        @include res-lg {
-          width: 50%;
-          left: 20%;
-          top: 5%;
-        }
         @include res-xl {
           width: 44%;
           left: 20%;
@@ -160,30 +163,40 @@
         @include res-sm-landscape {
           width: 45%;
           left: 20%;
-          top: 5%;
+          top: -2%;
         }
 
         @include res-md {
           width: 55%;
           left: 15%;
-          top: 15%;
+          top: 13%;
         }
 
         @include res-md-landscape {
           width: 55%;
           left: 15%;
-          top: 12%;
+          top: 10%;
         }
 
         @include res-lg {
           width: 53%;
-          top: 3%;
+          top: -5%;
           left: 15%;
         }
-        @include res-xl {
-          width: 53%;
+
+        @include res-lg-portrait {
           top: 5%;
+        }
+
+        @include res-xl {
+          width: 45%;
+          top: 4%;
           left: 15%;
+        }
+        @include res-xl-special {
+          width: 50%;
+          left: 170px;
+          top: 10px;
         }
 
         & img {
@@ -228,7 +241,7 @@
 
         @include res-md {
           width: 25%;
-          right: 0%;
+          right: 1%;
         }
         @include res-lg {
           width: 28%;

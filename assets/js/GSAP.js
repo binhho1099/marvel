@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(['.s1-top__banner-car1', '.s1-top__banner-car2'], {
+gsap.to('.s1-top__banner-car1', {
   scrollTrigger: {
     trigger: '.s1-top',
     start: 'top 10%',
@@ -10,6 +10,19 @@ gsap.to(['.s1-top__banner-car1', '.s1-top__banner-car2'], {
   },
   x: '-18%',
   y: '18%',
+  ease: 'none',
+  duration: 3,
+});
+gsap.to('.s1-top__banner-car2', {
+  scrollTrigger: {
+    trigger: '.s1-top',
+    start: 'top 10%',
+    end: 'bottom 10%',
+    scrub: true,
+    // markers: true,
+  },
+  x: '-35%',
+  y: '35%',
   ease: 'none',
   duration: 3,
 });

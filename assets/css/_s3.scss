@@ -134,21 +134,33 @@
       margin: 1.5% 0 2.5%;
 
       @include res-xs {
-        margin: 5% auto 5%;
+        margin: 3% auto 2%;
       }
 
       &-icon {
         height: auto;
         animation: btn 1s linear infinite;
         @include res-xs {
-          width: 5%;
+          width: 2.5%;
+        }
+
+        @include res-sm {
+          width: 2.5%;
+        }
+        @include res-md {
+          width: 2.5%;
         }
       }
 
       &-text {
         @include res-xs {
-          width: 85%;
-          flex: 1;
+          width: 45%;
+        }
+        @include res-sm {
+          width: 45%;
+        }
+        @include res-md {
+          width: 45%;
         }
       }
     }
