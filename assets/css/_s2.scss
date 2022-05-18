@@ -87,13 +87,19 @@
   @include res-xs {
     top: 35%;
   }
+
+  & img {
+    @include res-2xs {
+      width: 80%;
+    }
+  }
 }
 
 .owl-prev {
   left: -70px;
 
   @include res-xs {
-    left: -10%;
+    left: -12%;
   }
 }
 
@@ -101,7 +107,7 @@
   right: -70px;
 
   @include res-xs {
-    right: -10%;
+    right: -12%;
   }
 }
 

@@ -36,11 +36,19 @@
       top: 3%;
       right: -0.5%;
     }
+    @include res-2xs {
+      top: 2%;
+      right: -3%;
+    }
     & img {
       width: 70%;
 
       @include res-xs {
         width: 60%;
+      }
+
+      @include res-2xs {
+        width: 50%;
       }
     }
   }
