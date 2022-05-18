@@ -154,10 +154,10 @@
 
       &-text {
         @include res-xs {
-          width: 45%;
+          width: 60%;
         }
         @include res-sm {
-          width: 45%;
+          width: 60%;
         }
         @include res-md {
           width: 45%;
@@ -208,10 +208,6 @@
       }
     }
     &__list-product {
-      // display: flex;
-      // flex-wrap: wrap;
-      // gap: 20px;
-
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(3, 142px);
@@ -276,7 +272,10 @@
           height: auto;
 
           @include res-xs {
-            width: 90%;
+            width: 70%;
+          }
+          @include res-sm {
+            width: 70%;
           }
         }
       }

@@ -26,18 +26,21 @@
 
   &-btn-close {
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 6%;
+    right: 2%;
     z-index: 2;
-
     text-align: center;
     cursor: pointer;
+
+    @include res-xs {
+      top: 3%;
+      right: -0.5%;
+    }
     & img {
-      width: 80%;
-      filter: drop-shadow(0 0 10px #fff);
+      width: 70%;
 
       @include res-xs {
-        width: 50%;
+        width: 60%;
       }
     }
   }
