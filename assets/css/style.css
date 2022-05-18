@@ -310,7 +310,7 @@ img {
     height: 340px;
   }
 }
-@media (min-width: 300px) and (max-width: 400px) {
+@media (max-width: 400px) {
   .s1-top {
     height: 230px;
   }
@@ -393,7 +393,7 @@ img {
     height: 230px;
   }
 }
-@media (min-width: 300px) and (max-width: 400px) {
+@media (max-width: 400px) {
   .s1-top__banner-shape {
     height: 150px;
   }
@@ -464,7 +464,7 @@ img {
     top: 15%;
   }
 }
-@media (min-width: 300px) and (max-width: 400px) {
+@media (max-width: 400px) {
   .s1-top__banner-car1 {
     width: 50%;
     left: 15%;
@@ -474,8 +474,8 @@ img {
 @media (min-width: 576px) and (max-width: 768px) {
   .s1-top__banner-car1 {
     width: 55%;
-    left: 100px;
-    top: 0px;
+    left: 90px;
+    top: -5px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -496,7 +496,7 @@ img {
   .s1-top__banner-car1 {
     width: 45%;
     left: 20%;
-    top: -2%;
+    top: -5%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {

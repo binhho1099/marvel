@@ -145,8 +145,8 @@
 
         @include res-sm {
           width: 55%;
-          left: 100px;
-          top: 0px;
+          left: 90px;
+          top: -5px;
         }
         @include res-md {
           width: 60%;
@@ -163,7 +163,7 @@
         @include res-sm-landscape {
           width: 45%;
           left: 20%;
-          top: -2%;
+          top: -5%;
         }
 
         @include res-md {

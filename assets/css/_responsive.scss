@@ -4,7 +4,7 @@
   }
 }
 @mixin res-2xs {
-  @media (min-width: 300px) and (max-width: 400px) {
+  @media (max-width: 400px) {
     @content;
   }
 }
